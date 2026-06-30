@@ -41,33 +41,46 @@ Nothing private should be copied here unless it has been intentionally sanitized
 4. **Reviewability** - small changes, clear diffs, tests, and documentation.
 5. **Public-Safe Examples** - fake data only, no private context leaks.
 6. **Software Factory Habits** - repeatable scaffolding, issue templates, decision records, and release checklists.
+7. **Model Routing** - choosing the right agent or tool for the work.
+8. **Context Capsules** - compact public-safe context objects for agent continuity.
 
 ## Repository Map
 
 ```text
 .
 ├── AGENTS.md
+├── CONTRIBUTING.md
 ├── README.md
 ├── docs/
 │   ├── vision.md
 │   ├── repo-map.md
 │   ├── operating-principles.md
-│   └── public-private-boundary.md
+│   ├── public-private-boundary.md
+│   ├── public-readiness-checklist.md
+│   └── phase-1-roadmap.md
 ├── protocols/
 │   ├── prompt-contract-protocol.md
 │   ├── till-done-protocol.md
 │   ├── pure-focus-protocol.md
-│   └── agent-handoff-protocol.md
+│   ├── agent-handoff-protocol.md
+│   ├── model-routing-protocol.md
+│   └── reviewability-protocol.md
 ├── templates/
 │   ├── prompt-contract.template.md
 │   ├── task-spec.template.md
 │   ├── agent-handoff.template.md
 │   ├── decision-record.template.md
-│   └── pr-review.template.md
+│   ├── pr-review.template.md
+│   ├── context-capsule.template.md
+│   ├── project-brief.template.md
+│   └── public-readiness-checklist.template.md
 ├── examples/
 │   ├── sample-task-spec.md
-│   └── sample-agent-handoff.md
+│   ├── sample-agent-handoff.md
+│   ├── sample-prompt-contract.md
+│   └── sample-pr-review.md
 └── .github/
+    ├── pull_request_template.md
     └── ISSUE_TEMPLATE/
         ├── task-spec.md
         └── bug-report.md
@@ -79,9 +92,12 @@ Start with a task spec, then ask Codex or another coding agent to execute agains
 
 ```text
 Use templates/task-spec.template.md to define the work.
+Use templates/prompt-contract.template.md to package the work for an agent.
 Use protocols/pure-focus-protocol.md to prevent scope drift.
+Use protocols/model-routing-protocol.md to choose the right tool.
 Use protocols/agent-handoff-protocol.md when passing work to another tool or future session.
 Use templates/pr-review.template.md to review the output.
+Use docs/public-readiness-checklist.md before publishing examples or extracted private artifacts.
 ```
 
 ## Public Safety Rules
@@ -103,7 +119,7 @@ Use fake data, sample data, placeholders, or sanitized examples.
 
 ## Current Status
 
-Early scaffold. The first goal is to create a practical public toolkit for agentic coding workflows.
+Early public starter kit. Phase 1 focuses on templates, protocols, reviewability, model routing, public-safety boundaries, and fake examples.
 
 ## Roadmap
 
@@ -111,15 +127,20 @@ Early scaffold. The first goal is to create a practical public toolkit for agent
 
 - README
 - AGENTS.md
+- public readiness checklist
 - task spec template
 - prompt contract template
+- context capsule template
 - handoff template
 - pure focus protocol
 - till done protocol
+- model routing protocol
+- reviewability protocol
 
 ### Phase 2: Practical Examples
 
 - example task specs
+- example prompt contracts
 - example handoffs
 - example review checklists
 - small demo project scaffold
